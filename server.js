@@ -22,7 +22,7 @@ const verifyUser = require('./verifyUser'); // Import the verifyUser middleware 
 const app = express();
 
 
-app.use(cors());
+// app.use(cors());
 const allowedOrigins = ['http://localhost:3000', 'https://can-of-books-frontend-xvf4.onrender.com'];
 
 const corsOptions = {
