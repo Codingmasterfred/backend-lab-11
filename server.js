@@ -13,7 +13,7 @@ const axios = require('axios')
 // const { JwksClient } = require('jwks-rsa');
 const bookSchema = require('./books'); // Import the BookData model or data access layer
 const Seed = require('./seed'); // Import the seed script for database population
-const verifyUser = require('./verifyUser'); // Import the verifyUser middleware function
+// const verifyUser = require('./verifyUser'); // Import the verifyUser middleware function
 
 
 
@@ -48,7 +48,7 @@ const PORT = process.env.PORT || 3001;
 // }).unless({ path: ['/books'] })
 
 // app.use(verifyJWT);
-app.use(verifyUser); 
+// app.use(verifyUser); 
 
 
 app.get('/', async (req, res) => {
