@@ -22,14 +22,14 @@ const verifyUser = require('./verifyUser'); // Import the verifyUser middleware 
 const app = express();
 
 
-// app.use(cors());
-const allowedOrigins = ['http://localhost:3000', 'https://can-of-books-frontend-xvf4.onrender.com'];
+app.use(cors());
+// const allowedOrigins = ['http://localhost:3000', 'https://can-of-books-frontend-xvf4.onrender.com'];
 
-const corsOptions = {
-  origin: allowedOrigins,
-};
+// const corsOptions = {
+//   origin: allowedOrigins,
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 app.use(express.json())
 
