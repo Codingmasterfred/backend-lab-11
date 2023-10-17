@@ -20,7 +20,26 @@ const verifyUser = require('./verifyUser'); // Import the verifyUser middleware 
 
 
 const app = express();
-app.use(cors());
+
+const allowedOrigins = [
+    'https://can-of-books-frontend-xvf4.onrender.com',
+    // Add other domains if needed
+  ];
+  
+  const corsOptions = {
+    origin: function (origin, callback) {
+      // Check if the requesting origin is allowed
+      if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+  };
+  
+  app.use(cors(corsOptions)); // Use cors middleware with options
+  
+// app.use(cors());
 app.use(express.json())
 const PORT = process.env.PORT || 3001;
 
