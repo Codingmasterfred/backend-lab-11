@@ -23,6 +23,14 @@ const app = express();
 
 
 app.use(cors());
+const allowedOrigins = ['http://localhost:3000', 'https://can-of-books-frontend-xvf4.onrender.com'];
+
+const corsOptions = {
+  origin: allowedOrigins,
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json())
 
 const PORT = process.env.PORT || 3001;
