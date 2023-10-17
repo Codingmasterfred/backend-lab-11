@@ -5,7 +5,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose')
 // process.env.DatabaseUrl = 'mongodb://localhost:27017/BookDB'
-mongoose.set('strictQuery', true);
+mongoose.set('strictQuery', false);
 
 const jwt = require('express-jwt')
 const jwks = require('jwks-rsa')
