@@ -22,7 +22,7 @@ const verifyUser = require('./verifyUser'); // Import the verifyUser middleware 
 const app = express();
 
 
-app.use(cors({ origin: 'https://can-of-books-frontend-xvf4.onrender.com' }));
+app.use(cors());
 app.use(express.json())
 
 const PORT = process.env.PORT || 3001;
